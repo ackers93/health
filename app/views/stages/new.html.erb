@@ -1,0 +1,36 @@
+<h1>Now that you've signed up, Add your current information below.</h1>
+
+<%= @stage.created_at %>
+
+<%= form_for @stage do |s| %>
+
+<%= s.label :weight %> <br>
+<%= s.text_field :weight %> lbs. <br>
+
+<%= s.label :height %> <br>
+<%= s.text_field :height %> feet.<br>
+
+<%= s.label :neck %> <br>
+<%= s.text_field :neck %> inches.<br>
+
+<%= s.label :shoulders %> <br>
+<%= s.text_field :shoulders %> inches.<br>
+
+<%= s.label :chest %> <br>
+<%= s.text_field :chest %> inches.<br>
+
+<%= s.label :biceps %> <br>
+<%= s.text_field :biceps %> inches.<br>
+
+<%= s.label :waist %> <br>
+<%= s.text_field :waist %> inches.<br>
+
+<%= s.label :hips %> <br>
+<%= s.text_field :hips %> inches.<br>
+
+<%= s.label :thighs %> <br>
+<%= s.text_field :thighs %> inches.<br> <br>
+
+<%= s.submit 'Save Details' %>
+
+<% end %>

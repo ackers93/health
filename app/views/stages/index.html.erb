@@ -1,0 +1,21 @@
+<h1>Here's your record of each stage you've weighed in.</h1>
+<h6>Every two weeks, remeasure and see what progress you've made.</h6>
+
+<nav>
+  <%= button_to 'Update', new_stage_path, :method => :get %>
+</nav>
+<% @stages.each do |stage| %>
+<p>
+  Date: <%= stage.created_at.strftime("%b %d, %Y") %> <br>
+  Weight: <%= stage.weight %> lbs. <br>
+  Height: <%= stage.height %> ft. <br>
+  Neck:   <%= stage.neck %> in. <br>
+  Shoulders: <%= stage.shoulders %> in. <br>
+  Chest: <%= stage.chest %> in. <br>
+  Biceps: <%= stage.biceps %> in. <br>
+  Waist: <%= stage.waist %> in. <br>
+  Hips: <%= stage.hips %> in. <br>
+  Thighs: <%= stage.thighs %> in. <br>
+</p>
+
+<% end %>
