@@ -6,7 +6,58 @@ p {
 
 }
 
+navbar-nav {
+  background-color: rgb(17, 217, 211);
+  text-align: center;
+  font-size: 10pt;
+}
+
+ul [class="dropdown-menu"]{
+  background-color: white;
+  border: 3px solid #4CAF50;
+  border-radius: 20px;
+}
+
 nav {
-text-align: center;
-font-size: 30pt;
+  background-color: rgb(70, 70, 70);
+  text-align: center;
+  font-size: 10pt;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  size: 200px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+th {
+  border-bottom: 2px solid rgb(122, 118, 116);
+  border-left: 1px solid black;
+  padding: 15px;
+}
+
+td {
+border-left: 1px solid black;
+padding: 15px;
+}
+
+input[type=submit] {
+  font-size: 12pt;
+  border: 3px solid #4CAF50;
+  border-radius: 20px;
+  background-color: white;
+}
+
+input[type=text] {
+  border-radius: 25px;
+  text-align: center;
+  font-size: 15pt;
+}
+
+label {
+  border-radius: 15px;
+  margin-left: 10px;
+  font-size: 15pt;
 }

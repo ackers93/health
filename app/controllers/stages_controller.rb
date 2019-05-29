@@ -1,18 +1,18 @@
 class StagesController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @stages = Stage.all
+    @stages = current_user.stages
   end
 
   def show
   end
 
   def new
-    @stage = Stage.new
+    @stage = current_user.stages.new
   end
 
   def create
-    @stage = Stage.new(allowed_params)
-
+    @stage = current_user.stages.new(allowed_params)
     if @stage.save
       redirect_to stages_path
     else
