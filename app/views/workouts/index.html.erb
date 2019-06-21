@@ -1,0 +1,20 @@
+<h1>Hi</h1>
+
+<%= button_to 'Update', new_workout_path, :method => :get %>
+
+<% @workouts.each do |workout| %>
+<table>
+  <thead>
+      <tr>
+        <th>Workout</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= workout.name %></td>
+      </tr>
+    </tbody>
+</table>
+<% end %>
+
+ <%# <%= link_to 'Delete Item', workout, method: :delete %>

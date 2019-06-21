@@ -1,0 +1,13 @@
+<h1>Workout</h1>
+<h3 style="background-color: #4CAF60; height: 70px; padding: 20px;">Now that you've signed up, Add your current information below.</h3>
+
+
+<%= form_for @workout do |s| %>
+
+<%= s.label :name %> <br>
+<%= s.text_field :name %><br><br>
+
+<%= s.submit 'Save Details' %>
+<%= button_to 'All Records', stages_path, :method => :get %>
+
+<% end %>
