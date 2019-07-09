@@ -21,12 +21,22 @@ class StagesController < ApplicationController
   end
 
   def edit
+    @stage = current_user.stages.find(params[:id])
   end
 
   def update
+    @stage = current_user.stages.find(params[:id])
+    if @stage.update_attributes(allowed_params)
+      redirect_to stages_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @stage = current_user.stages.find(params[:id])
+    @stage.destroy
+    redirect_to stages_path
   end
 
   private

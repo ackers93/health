@@ -37,4 +37,10 @@
       </tr>
     </tbody>
 </table>
+<div class="delete">
+  <%= button_to 'Delete', stage, :method => :delete %>
+</div>
+<div class="edit">
+  <%= button_to 'Edit', edit_stage_path(stage), :method => :get %>
+</div>
 <% end %>
